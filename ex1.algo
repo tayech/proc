@@ -1,0 +1,26 @@
+FUNCTION dot_function(var v1,v2:ARRAY_of FLOAT ) : FLOAT
+VAR
+    i,j:FLOAT;
+    ps:FLOAT:=0;
+BEGIN
+    FOR i FROM 0 TO length v1-1  DO
+    FOR j FROM 0 TO length v2-1  DO
+    ps:=v1[i]*v2[j];
+    END_FOR
+    END_FOR
+    RETURN ps ;  
+END
+
+
+
+
+ALGORITHM algorithm_vecteur
+VAR
+  t1:ARRAY_of FLOAT[n];
+  t2:ARRAY_of FLOAT[n];
+BEGIN
+    prd := dot_function(t1,t2);
+    IF (prd=0) THEN
+        write("vecteur orthogonaux")
+    END_IF
+END
